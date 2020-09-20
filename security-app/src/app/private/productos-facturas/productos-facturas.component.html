@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <ul class="list-group">
+      <li class="list-group-item">PRODUCTOS FACTURAS</li>
+      <li class="list-group-item list-group-item-warning" *ngFor="let pf of productosFacturas">{{"Id: "+pf.id+","+"Factura_id: "+pf.factura_id+","+"Producto_id: "+pf.producto_id+","+"Cantidad: "+pf.cantidad+","+"Creado_por: "+pf.creado_por+","+"Subtotal: "+pf.subtotal}}</li>
+    </ul>
+  </div>
+</div>

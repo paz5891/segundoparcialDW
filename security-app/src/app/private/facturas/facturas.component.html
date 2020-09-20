@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-md-8 mx-auto">
+    <ul class="list-group">
+      <li class="list-group-item">FACTURAS</li>
+      <li class="list-group-item list-group-item-warning" *ngFor="let fac of facturas">{{"Id: "+fac.id+","+"cliente_id: "+fac.cliente_id+","+"Empleado_id: "+fac.empleado_id+","+"creado: "+fac.creado+","+"Estado: "+fac.estado}}</li>
+    </ul>
+  </div>
+</div>
+

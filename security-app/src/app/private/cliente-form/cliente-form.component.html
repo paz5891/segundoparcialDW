@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col"></div>
+  <div class="col">
+    <form class="form-group">
+      <fieldset>
+        <label class="control-label" for="idInput">Id</label>
+        <input class="form-control" id="idInput" type="text" placeholder="id..." disabled="">
+      </fieldset>
+      <fieldset>
+        <label class="control-label" for="nombreInput">Nombre</label>
+        <input class="form-control" id="nombreInput" type="text" placeholder="nombre...">
+      </fieldset>
+      <fieldset>
+        <label class="control-label" for="direccionInput">Dirección</label>
+        <input class="form-control" id="direccionInput" type="text" placeholder="direccion...">
+      </fieldset>
+      <fieldset>
+        <label class="control-label" for="nitInput">Nit</label>
+        <input class="form-control" id="nitInput" type="text" placeholder="nit...">
+      </fieldset>
+      <button type="submit" class="btn btn-primary" (click)="ngOnGuardar()">Guardar</button>
+      <button type="submit" class="btn btn-danger" (click)="ngOnEliminar()">Eliminar</button>
+      <button type="submit" class="btn btn-danger" (click)="ngOnCancelar()">Cancelar</button>
+    </form>
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="col-md-8 mx-auto">
+    <ul class="list-group">
+      <li class="list-group-item">FACTURAS</li>
+      <li class="list-group-item list-group-item-warning" *ngFor="let fac of facturas">{{"Id: "+fac.id+","+"cliente_id: "+fac.cliente_id+","+"Empleado_id: "+fac.empleado_id+","+"creado: "+fac.creado+","+"Estado: "+fac.estado}}</li>
+    </ul>
+  </div>
+</div> -->
