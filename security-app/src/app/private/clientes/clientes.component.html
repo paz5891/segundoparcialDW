@@ -1,11 +1,33 @@
+<!--
 <div class="row">
   <div class="col-md-8 mx-auto">
     <ul class="list-group">
       <li class="list-group-item">CLIENTES</li>
-      <li class="list-group-item list-group-item-warning" *ngFor="let cli of clientes">{{"Id: "+cli.id+","+"Nombre: "+cli.nombre+","+"Nit: "+cli.nit+","+"Direccion: "+cli.direccion}}</li>
+      <li class="list-group-item list-group-item-warning" *ngFor="let cli of clientes"><a [routerLink]="['/Clientes', cli.id]"> {{"Id: "+cli.id+","+"Nombre: "+cli.nombre+","+"Nit: "+cli.nit+","+"Direccion: "+cli.direccion}}</a></li>
     </ul>
   </div>
 </div>
+-->
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Direccion</th>
+      <th scope="col">Nit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cli of clientes">
+      <th scope="row"><a [routerLink]="['/clientes', cli.id]">{{cli.id}}</a></th>
+      <td>{{cli.nombre}}</td>
+      <td>{{cli.direccion}}</td>
+      <td>{{cli.nit}}</td>
+    </tr>
+  </tbody>
+</table>
+
 <div class="row">
   <div  class="col"></div>
   <div class="col"><button type="submit" class="btn btn-primary" (click)="onAgregar()">Agregar</button></div>

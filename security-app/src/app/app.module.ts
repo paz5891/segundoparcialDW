@@ -13,6 +13,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './auth.guard';
 import { InterceptorService } from './services/interceptor.service';
 import { ClienteFormComponent } from './private/cliente-form/cliente-form.component';
+import { FacturaFormComponent } from './private/factura-form/factura-form.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ClienteFormComponent } from './private/cliente-form/cliente-form.compon
     FacturasComponent,
     ProductosComponent,
     ProductosFacturasComponent,
-    ClienteFormComponent
+    ClienteFormComponent,
+    FacturaFormComponent
   ],
   imports: [
     BrowserModule,
