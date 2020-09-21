@@ -1,8 +1,8 @@
-import { ClienteDataServiceService } from './../../services/cliente-data-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from 'src/app/models/cliente';
 import { ClienteService } from './../../services/cliente.service';
 import { Router } from '@angular/router'; // para el onAgregar
+import { ClienteDataServiceService } from './../../services/cliente-data-service.service';
 
 @Component({
   selector: 'app-clientes',
@@ -12,7 +12,7 @@ import { Router } from '@angular/router'; // para el onAgregar
 export class ClientesComponent implements OnInit {
 
   constructor(private clienteService: ClienteService,
-    private router: Router,  //sirve para el navigate en onAgregar
+    private router: Router, // para el onAgregar
     private service: ClienteDataServiceService
     ) { }
 
@@ -20,18 +20,19 @@ export class ClientesComponent implements OnInit {
   clientes: Cliente[]=[];
 
   ngOnInit(): void {
-    //this.clientes = this.service.getClientes();
-    this.clienteService.getCliente().subscribe(
-      res => {
-        this.clientes = res;
+    this.service.getClientes().subscribe(
+      (clientes: Cliente[]) => {
+        this.clientes = clientes;
       }
     );
   }
- // this.router.navigate(['clientes/add']);
+ /* ngOnInit(): void {
+    this.clientes = this.service.getClientes();
+  }*/
+
   // para mostrar el formulario de agregar clientes
   onAgregar(){
-
-    this.router.navigate(['clientes/add']);
+   this.router.navigate(['clientes/add']);
   }
 
 }
